@@ -5,14 +5,16 @@ SYSTEM_THREAD(ENABLED);
 
 OledWingAdafruit display;
 
-uint64_t reading = analogRead(A4);
+#define TMP A4
+
+uint64_t reading = analogRead(TMP);
 double voltage = (reading * 3.3) / 4095.0;
 double celsius = (voltage - 0.5) * 100;
 double farenheit = (celsius * 9.0 / 5.0) + 32.0;
 
 void setup()
 {
-  pinMode(A4, INPUT);
+  pinMode(TMP, INPUT);
 
   display.setup();
   display.clearDisplay();
