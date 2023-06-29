@@ -8,7 +8,7 @@ OledWingAdafruit display;
 uint64_t reading = analogRead(A4);
 double voltage = (reading * 3.3) / 4095.0;
 double celsius = (voltage - 0.5) * 100;
-double farenheit = (celsius * 9 / 5) + 32;
+double farenheit = (celsius * 9.0 / 5.0) + 32.0;
 
 void setup()
 {
