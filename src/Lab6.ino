@@ -29,6 +29,7 @@ void loop()
   display.println(celsius);
   display.setCursor(33, 0);
   display.println("degrees celsius");
+
   display.setCursor(0, 15);
   display.println(farenheit);
   display.setCursor(32, 15);
