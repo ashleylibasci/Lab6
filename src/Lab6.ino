@@ -16,6 +16,8 @@ void setup()
 
 void loop()
 {
+  display.loop();
+
   uint64_t reading = analogRead(A4);
   double voltage = (reading * 3.3) / 4095.0;
   double celsius = (voltage - 0.5) * 100;
