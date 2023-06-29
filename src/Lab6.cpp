@@ -25,13 +25,13 @@ void setup()
 
 void loop()
 {
-  display.loop();
-  
   uint64_t reading = analogRead(A4);
   double voltage = (reading * 3.3) / 4095.0;
   double celsius = (voltage - 0.5) * 100;
 
   double farenheit = (celsius * 9 / 5) + 32;
+
+  display.loop();
 
   display.clearDisplay();
   display.setTextSize(1);
